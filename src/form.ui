@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="How To Use">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>500</width> <!-- Updated width to match the first UI -->
+    <height>400</height> <!-- Updated height to match the first UI -->
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>VideoExcess - Welcome</string> <!-- Set a more descriptive window title -->
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize> <!-- Increased font size for better visibility -->
+         <weight>75</weight> <!-- Optionally set semi-bold font weight -->
+        </font>
+       </property>
+       <property name="text">
+        <string>Welcome to the VideoExcess, designed specifically for seamless playback of extensive folders brimming with MP4 and MP3 files. This powerful media player enhances your viewing experience by meticulously tracking the percentage of files you have watched, ensuring that you stay organized and informed about your media consumption. Additionally, the program features a customizable skip functionality, allowing you to specify the percentage of a video that must be viewed before you can skip ahead, catering to your unique preferences. With an intuitive interface aimed at efficiently managing large libraries, VideoExcess offers an unparalleled combination of usability and flexibility, making it the ideal choice for both casual viewers and dedicated enthusiasts alike. Enjoy effortless navigation and tailored playback options as you immerse yourself in your extensive collection of videos and music.</string>
+       </property>
+       <property name="wordWrap">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton">
+       <property name="styleSheet">
+        <string>
+        QPushButton {
+          background-color: #6200EA; /* Vibrant Purple */
+          color: white;
+          font-size: 18px;
+          border-radius: 12px; /* Increased roundness */
+          padding: 12px;
+          border: none; /* Remove the border */
+        }
+        QPushButton:hover {
+          background-color: #3700B3; /* Darker purple when hovered */
+          transform: translateY(-2px); /* Slight lift effect */
+        }
+        QPushButton:pressed {
+          background-color: #230036; /* Darker on press */
+        }
+        </string>
+       </property>
+       <property name="text">
+        <string>Continue</string> <!-- Changed button text to be more appropriate for the context -->
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

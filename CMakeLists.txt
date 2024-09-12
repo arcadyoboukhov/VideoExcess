@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.16)
 
-project(VideoexcesV3fixed VERSION 0.1 LANGUAGES CXX)
+project(VideoExcess VERSION 0.1 LANGUAGES CXX)
 
 set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTOMOC ON)
@@ -9,50 +9,59 @@ set(CMAKE_AUTORCC ON)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets)
-find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets)
+# Add the src directory to the path for source files
+set(SOURCE_DIR src)
+
+find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets Multimedia MultimediaWidgets)
+find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets Multimedia MultimediaWidgets)
 
 set(PROJECT_SOURCES
-        main.cpp
-        mainwindow.cpp
-        mainwindow.h
-        mainwindow.ui
+    ${SOURCE_DIR}/main.cpp
+    ${SOURCE_DIR}/mainwindow.cpp
+    ${SOURCE_DIR}/mainwindow.h
+    ${SOURCE_DIR}/settings.cpp
+    ${SOURCE_DIR}/settings.h
+    ${SOURCE_DIR}/form.cpp
+    ${SOURCE_DIR}/form.h
+    ${SOURCE_DIR}/player.cpp
+    ${SOURCE_DIR}/player.h
+    ${SOURCE_DIR}/mainwindow.ui
+    ${SOURCE_DIR}/settings.ui
+    ${SOURCE_DIR}/form.ui
+    ${SOURCE_DIR}/player.ui
+    ${SOURCE_DIR}/filex.cpp
+    ${SOURCE_DIR}/filex.h
+    ${SOURCE_DIR}/filex.ui
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
-    qt_add_executable(VideoexcesV3fixed
+    qt_add_executable(VideoExcess  # Changed this line
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
-        form.h form.cpp form.ui
-        settings.h settings.cpp settings.ui
+        assetsConfig.qrc
     )
-# Define target properties for Android with Qt 6 as:
-#    set_property(TARGET VideoexcesV3fixed APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR
-#                 ${CMAKE_CURRENT_SOURCE_DIR}/android)
-# For more information, see https://doc.qt.io/qt-6/qt-add-executable.html#target-creation
 else()
     if(ANDROID)
-        add_library(VideoexcesV3fixed SHARED
+        add_library(VideoExcess SHARED  # Also change here for Android
             ${PROJECT_SOURCES}
         )
-# Define properties for Android with Qt 5 after find_package() calls as:
-#    set(ANDROID_PACKAGE_SOURCE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/android")
     else()
-        add_executable(VideoexcesV3fixed
+        add_executable(VideoExcess  # Changed this line
             ${PROJECT_SOURCES}
         )
     endif()
 endif()
 
-target_link_libraries(VideoexcesV3fixed PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
+target_link_libraries(VideoExcess PRIVATE
+    Qt${QT_VERSION_MAJOR}::Widgets
+    Qt${QT_VERSION_MAJOR}::Multimedia
+    Qt${QT_VERSION_MAJOR}::MultimediaWidgets)
 
-# Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
-# If you are developing for iOS or macOS you should consider setting an
-# explicit, fixed bundle identifier manually though.
 if(${QT_VERSION} VERSION_LESS 6.1.0)
-  set(BUNDLE_ID_OPTION MACOSX_BUNDLE_GUI_IDENTIFIER com.example.VideoexcesV3fixed)
+    set(BUNDLE_ID_OPTION MACOSX_BUNDLE_GUI_IDENTIFIER com.example.VideoExcess)  # Change this line too
 endif()
-set_target_properties(VideoexcesV3fixed PROPERTIES
+
+set_target_properties(VideoExcess PROPERTIES
     ${BUNDLE_ID_OPTION}
     MACOSX_BUNDLE_BUNDLE_VERSION ${PROJECT_VERSION}
     MACOSX_BUNDLE_SHORT_VERSION_STRING ${PROJECT_VERSION_MAJOR}.${PROJECT_VERSION_MINOR}
@@ -61,12 +70,12 @@ set_target_properties(VideoexcesV3fixed PROPERTIES
 )
 
 include(GNUInstallDirs)
-install(TARGETS VideoexcesV3fixed
+install(TARGETS VideoExcess  # Change this line
     BUNDLE DESTINATION .
     LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
     RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
 )
 
 if(QT_VERSION_MAJOR EQUAL 6)
-    qt_finalize_executable(VideoexcesV3fixed)
+    qt_finalize_executable(VideoExcess)  # Change this line
 endif()

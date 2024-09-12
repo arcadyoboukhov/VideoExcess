@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>mainWindow</class>
+ <widget class="QMainWindow" name="mainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>853</width>
+    <height>496</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>VideoExcess</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0" colspan="2">
+     <widget class="QLabel" name="logoLabel">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+        <horstretch>1</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="pixmap">
+       <pixmap>../assets/videoexcesslight.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignHCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QPushButton" name="pushButton_2">
+      <property name="styleSheet">
+       <string>
+        QPushButton {
+          background-color: #6200EA;
+          color: white;
+          font-size: 16px;
+          border-radius: 12px;
+          padding: 10px;
+          border: none;
+        }
+        QPushButton:hover {
+          background-color: #3700B3;
+          transform: translateY(-2px);
+        }
+        QPushButton:pressed {
+          background-color: #230036;
+        }
+       </string>
+      </property>
+      <property name="text">
+       <string>Select File</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QPushButton" name="pushButton">
+      <property name="styleSheet">
+       <string>
+        QPushButton {
+          background-color: #6200EA;
+          color: white;
+          font-size: 16px;
+          border-radius: 12px;
+          padding: 10px;
+          border: none;
+        }
+        QPushButton:hover {
+          background-color: #3700B3;
+          transform: translateY(-2px);
+        }
+        QPushButton:pressed {
+          background-color: #230036;
+        }
+       </string>
+      </property>
+      <property name="text">
+       <string>Select Single Folder</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <widget class="QPushButton" name="pushButton_4">
+      <property name="styleSheet">
+       <string>
+        QPushButton {
+          background-color: #6200EA;
+          color: white;
+          font-size: 16px;
+          border-radius: 12px;
+          padding: 10px;
+          border: none;
+        }
+        QPushButton:hover {
+          background-color: #3700B3;
+          transform: translateY(-2px);
+        }
+        QPushButton:pressed {
+          background-color: #230036;
+        }
+       </string>
+      </property>
+      <property name="text">
+       <string>How to use</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <widget class="QPushButton" name="pushButton_3">
+      <property name="styleSheet">
+       <string>
+        QPushButton {
+          background-color: #6200EA;
+          color: white;
+          font-size: 16px;
+          border-radius: 12px;
+          padding: 10px;
+          border: none;
+        }
+        QPushButton:hover {
+          background-color: #3700B3;
+          transform: translateY(-2px);
+        }
+        QPushButton:pressed {
+          background-color: #230036;
+        }
+       </string>
+      </property>
+      <property name="text">
+       <string>Settings</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="0">
+     <widget class="QLabel" name="label_2">
+      <property name="text">
+       <string>© 2024 Arcady Oboukhov. All rights reserved.</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignHCenter</set>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>853</width>
+     <height>25</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

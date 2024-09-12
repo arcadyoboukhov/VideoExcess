@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="images">
+        <file>assets/videoexcesslight.png</file>
+    </qresource>
+</RCC>
