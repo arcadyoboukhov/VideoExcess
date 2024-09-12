@@ -43,7 +43,7 @@ CMakeLists.txt.user*
 *.flc
 
 # Vim temporary files
-.*.swp
+.* .swp
 
 # Visual Studio generated files
 *.ib_pdb_index
@@ -72,3 +72,8 @@ CMakeLists.txt.user*
 *.dll
 *.exe
 
+# C++ objects and libs
+*.slo
+*.lo
+# You can add any other lines needed from the conflict
+# based on your requirements
