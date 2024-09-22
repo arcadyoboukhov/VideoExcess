@@ -12,7 +12,7 @@ VideoExcess is a video player made for large amounts of mp3 and mp4 files. It di
 
 ## Demo
 
-![Demo]([path/to/demo-screenshot.png](https://github.com/arcadyoboukhov/VideoExcess/blob/main/Screenshot%202024-09-21%20203716.png))
+![Demo](https://github.com/arcadyoboukhov/VideoExcess/blob/main/Screenshot%202024-09-21%20203716.png)
 
 
 ## Technologies Used
