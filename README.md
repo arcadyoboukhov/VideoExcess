@@ -21,15 +21,13 @@ VideoExcess is a video player made for large amounts of mp3 and mp4 files. It di
 - **Programming Languages:** C++, Cmake
 - **Software used:** QT Creator, QT Designer
 
-
 ## Installation
 
-Follow the steps below to install the project locally.
+Follow the steps below to install the project locally:
 
-1. Download the program:
-   So go on the program and click the Code Button. Click Download Zip.
-2. Download QT Creator:
-   Go to the QT website (Google it). So, find a YouTube tutorial on how to set it up. I used Mingw, so you will need to set it up with Mingw (not Visual Studio).
+1. Download the ZIP file from the Releases:  
+   https://github.com/arcadyoboukhov/VideoExcess/releases/tag/V1Beta
 
-3. Select the folder of the project: Select all the files in the project. Run the program in QT Creator. 
- 
+2. Extract the ZIP file and run the EXE file.
+
+3. Please note that there may be bugs. Feel free to contribute to the code!
